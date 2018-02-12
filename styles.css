@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  /* font-size: 200px; */
+
+  margin: 0;
+  padding: 0;
+}
+/*
+img {
+  width: 20%;
+  height: 40%;
+} */
+.community-photos {
+  background-image: url('../second-try/photos/artist.jpg');
+  background-position: center;
+  width: 40vw;
+}
+.mc-content {
+  display: flex;
+}
+
+ .button {
+   width: 33.33%;
+ }
+
+ .explore,
+ .create,
+ .search,
+ .buy,
+ .chat,
+ .teach,
+ .blog {
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+ }
+
+
+
+.mc-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 100vh;
+  flex-direction: row;
+  background-color: green;
+}
+
+.user-welcome {
+  background: #534B62;
+  width: 66.66%;
+  align-items: center;
+}
+
+.explore{
+  background: #A0A6B5;
+}
+
+.create {
+  background: #BCA0BC;
+}
+
+.search {
+  background: #93B7BE;
+}
+
+.buy {
+  background: #534B62;
+}
+
+.chat {
+  background: #A499B3;
+}
+
+.teach {
+  background: #BCA0BC;
+}
+
+.blog {
+  background: #A499B3
+}
+
+.something {
+  background: mistyrose
+}
+
+/* .personal-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 450px;
+} */
+
+
+/* Small screens */
+@media only screen and (max-width: 950px) {
+  .mc-buttons {
+    flex-direction: row;
+  }
+  .user-welcome {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .explore,
+  .create,
+  .search,
+  .buy,
+  .chat,
+  .teach,
+  .blog {
+    width: 50%;
+  }
+}
