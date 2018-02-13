@@ -1,58 +1,101 @@
 * {
   box-sizing: border-box;
-  /* font-size: 200px; */
-
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
-/*
-img {
-  width: 20%;
-  height: 40%;
-} */
+
+p {
+  margin-top: 5px;
+  font-family: 'Unica One', cursive;
+}
+
+.button:hover {
+  opacity:0.7;
+}
+
+.button:first-child:hover {
+  opacity: 1;
+}
+
+.sign-up,
+.log-in {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  border: 1px solid #000;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.button img {
+  width: 30%;
+  height: 30%;
+  opacity:1;
+}
+
 .community-photos {
-  background-image: url('../second-try/photos/artist.jpg');
-  background-position: center;
+  background-image: url('../comp-one/photos/disco-balls.jpg');
+  background-position-y: 30%;
+  background-position-x: center;
+  background-repeat: no-repeat;
   width: 40vw;
 }
+
 .mc-content {
   display: flex;
 }
 
  .button {
-   width: 33.33%;
+   width: 33.333%;
+   height: 33.333%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   display: flex;
  }
 
- .explore,
+ .discover,
  .create,
  .search,
  .buy,
  .chat,
  .teach,
  .blog {
-   justify-content: center;
-   align-items: center;
    text-align: center;
  }
 
+ .hidden {
+   display: none;
+ }
 
+h1 {
+  font-size: 1.5em;
+  font-family: 'Vollkorn', serif;
+  margin-top: 20px;
+}
 
 .mc-buttons {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
   height: 100vh;
-  flex-direction: row;
-  background-color: green;
 }
 
 .user-welcome {
   background: #534B62;
   width: 66.66%;
-  align-items: center;
+  padding: 3vw;
+  display: inline-block;
 }
 
-.explore{
+.user-welcome p {
+  font-family: 'Vollkorn', serif;
+  font-size: .7em;
+  margin: 0 0 5px 0;
+}
+
+.discover{
   background: #A0A6B5;
 }
 
@@ -77,44 +120,88 @@ img {
 }
 
 .blog {
-  background: #A499B3
+  background: #93B7BE
 }
-
-.something {
-  background: mistyrose
-}
-
-/* .personal-photos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-img {
-  width: 450px;
-} */
-
 
 /* Small screens */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 900px) {
+  .mc-content {
+    flex-direction: column;
+  }
+
   .mc-buttons {
     flex-direction: row;
-  }
-  .user-welcome {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
     width: 100%;
   }
 
-  .explore,
+  .user-welcome {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 1vw;
+    order: 0;
+  }
+
+  .blog {
+    width: 100%;
+    order: 4;
+  }
+
+  .discover,
   .create,
   .search,
   .buy,
   .chat,
-  .teach,
-  .blog {
+  .teach {
     width: 50%;
+    text-align: center;
+    order: 3;
+  }
+
+  .hidden {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../comp-one/photos/keys.jpg');
+    background-position-y: bottom;
+    background-position-x: 100%;
+    order: 1;
+  }
+
+@media only screen and (max-width: 600px) {
+  .mc-content {
+    width: 100%;
+  }
+
+  .user-welcome {
+    font-size: 1.2em;
+    order: 0;
+  }
+
+  .hidden {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../comp-one/photos/keys.jpg');
+    background-position-y: 90%;
+    background-position-x: 60%;
+    order: 1;
+  }
+
+  .discover,
+  .create,
+  .search,
+  .buy,
+  .chat,
+  .teach {
+    width: 100%;
+    font-size: 1.2em;
+    order: 3;
+  }
+
+  .blog {
+    order: 4;
   }
 }
